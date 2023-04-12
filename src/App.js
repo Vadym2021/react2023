@@ -1,5 +1,6 @@
 import './App.css';
 import Simpsons from "./components/simpsons/simpsons";
+import IncrementDecrement from "./components/IncrementDecrement/IncrementDecrement";
 
 export let simpsons = [
     {
@@ -45,6 +46,7 @@ function App() {
 
         <div>
             <div>
+                <IncrementDecrement/>
                 <Simpsons info={simpsons}/>
             </div>
         </div>
