@@ -1,6 +1,10 @@
 import './App.css';
-import Simpsons from "./components/simpsons/simpsons";
-import IncrementDecrement from "./components/IncrementDecrement/IncrementDecrement";
+//import Simpsons from "./components/simpsons/simpsons";
+//import IncrementDecrement from "./components/IncrementDecrement/IncrementDecrement";
+//import Comments from "./components/comments/Comments";
+import Posts from "./components/posts/Posts";
+import {useState} from "react";
+import Postinfo from "./components/postinfo/Postinfo";
 
 export let simpsons = [
     {
@@ -40,17 +44,33 @@ export let simpsons = [
     },
 ];
 
-function App() {
+const App = () => {
+
+    let [postInfo, setPostInfo] = useState({})
+
+    const lift = (obj) => {
+        setPostInfo({...obj});
+        console.log(obj)
+    }
 
     return (
 
         <div>
             <div>
-                <IncrementDecrement/>
-                <Simpsons info={simpsons}/>
+                <Postinfo info={postInfo}/>
+            </div>
+            <div>
+                <Posts lift={lift}/>
+            </div>
+            <div>
+                <Postinfo info={postInfo}/>
             </div>
         </div>
     );
 }
 
 export default App;
+
+//<Comments/>
+//<IncrementDecrement/>
+//<Simpsons info={simpsons}/>
