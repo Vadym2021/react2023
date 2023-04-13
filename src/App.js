@@ -5,6 +5,8 @@ import './App.css';
 import Posts from "./components/posts/Posts";
 import {useState} from "react";
 import Postinfo from "./components/postinfo/Postinfo";
+import Missions from "./components/spacexmissions/Missions";
+
 
 export let simpsons = [
     {
@@ -56,6 +58,7 @@ const App = () => {
     return (
 
         <div>
+            <div><Missions/></div>
             <div>
                 <Postinfo info={postInfo}/>
             </div>
