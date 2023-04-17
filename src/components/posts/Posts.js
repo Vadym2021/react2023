@@ -2,11 +2,15 @@ import React, {useEffect, useState} from 'react';
 import Post from "../post/Post";
 
 
+
 const Posts = ({lift}) => {
 
     let [Posts, setPosts] = useState([]);
 
     useEffect(() => {
+
+
+
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(value => value.json())
             .then(allPosts => {
